@@ -1,0 +1,17 @@
+<h1>{{ api}}</h1>
+<h1>Toast</h1>
+<button mat-button (click)="popToast('error', 'Sensor', 'temp.msg', 1500)">Error</button>
+<button mat-button (click)="popToast('warning', 'Sensor', 'temp.msg', 1500)">Warning</button>
+<button mat-button (click)="popToast('success', 'Sensor', 'temp.msg', 1500)">Success</button>
+<button mat-button (click)="popToast('info', 'Sensor', 'temp.msg', 1500)">Info</button>
+<h1>Theme</h1>
+<button mat-raised-button (click)="themeChange(0)" color="primary">Dark</button>
+<button  mat-raised-button (click)="themeChange(1)" color="accent">Light</button>
+<button  mat-raised-button (click)="themeChange(2)" color="warn">Calmic</button>
+<button  mat-raised-button (click)="themeChange(3)" >Calmic Red</button>
+
+<h1>Language</h1>
+<button  mat-raised-button (click)="languageChange('en')">English</button>
+<button  mat-raised-button (click)="languageChange('jp')">Japan</button>
+
+<router-outlet></router-outlet>

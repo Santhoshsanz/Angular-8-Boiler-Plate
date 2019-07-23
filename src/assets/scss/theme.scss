@@ -1,0 +1,13 @@
+$variables: (
+    --bg-color: var(--bg-color),
+    --fore-color: var(--fore-color),
+    --text-color:  var(--text-color),
+    --hover-color: var(--hover-color),
+    --secondary-text-color:var(--secondary-text-color),
+    --secondary-hover-color:var(--secondary-hover-color)
+  );
+  
+  // grabs the native css variable from the global sass map
+@function var($variable) {
+    @return map-get($variables, $variable);
+}

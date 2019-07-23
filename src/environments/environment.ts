@@ -2,8 +2,19 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { UrlList } from './urlList';
 export const environment = {
-  production: false
+  production: false,
+  // cLogo: './assets/images/logoClients/logoFull.png',
+  cLogo: '',
+
+  url: {
+    siteUrl: UrlList.dev.url,
+    notificationUrl: UrlList.dev.notificationUrl,
+    oAuth: UrlList.dev.oAuth,
+    userName: UrlList.dev.username,
+    password: UrlList.dev.password
+  }
 };
 
 /*

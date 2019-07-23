@@ -28,9 +28,15 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
+              "src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/sockjs-client/dist/sockjs.min.js",
+              "node_modules/stompjs/lib/stomp.min.js",
+              "node_modules/hammerjs/hammer.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -56,6 +62,46 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "dubai": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dubai.ts"
+                }
+              ]
+            },
+            "us": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.us.ts"
+                }
+              ]
+            },
+            "sa": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.sa.ts"
+                }
+              ]
+            },
+            "japan": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.japan.ts"
+                }
+              ]
+            },
+            "iopBeta": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.iopBeta.ts"
+                }
+              ]
             }
           }
         },
@@ -67,6 +113,21 @@
           "configurations": {
             "production": {
               "browserTarget": "iop-v2:build:production"
+            },
+            "dubai": {
+              "browserTarget": "iop-v2:build:dubai"
+            },
+            "us": {
+              "browserTarget": "iop-v2:build:us"
+            },
+            "sa": {
+              "browserTarget": "iop-v2:build:sa"
+            },
+            "japan": {
+              "browserTarget": "iop-v2:build:japan"
+            },
+            "iopBeta": {
+              "browserTarget": "iop-v2:build:iopBeta"
             }
           }
         },
@@ -88,6 +149,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -119,6 +181,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "iop-v2"
 }
